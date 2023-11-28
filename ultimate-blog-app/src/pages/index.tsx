@@ -7,7 +7,7 @@ import {HiChevronDown} from 'react-icons/hi';
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col w-full h-screen'>
+    <div className='flex flex-col w-full h-full'>
       <header className='h-20 w-full flex flex-row justify-around items-center bg-white border-b-[1px] border-gray-200'>
         <div>
           <IoReorderThreeOutline className="text-2xl text-gray-600" />
@@ -30,7 +30,7 @@ const HomePage = () => {
           </div>
         </div>
       </header>
-      <section className='grid grid-cols-12 place-items-center w-full h-full'>
+      <section className='grid grid-cols-12  w-full h-full'>
         <main className='col-span-8 border-r border-gray-300 w-full h-full px-24'>
           <div className='flex flex-col space-y-4 py-10'>
             <div className='flex space-x-4 items-center w-full'>
@@ -81,15 +81,14 @@ const HomePage = () => {
                 <div key={i} className="flex group flex-col space-y-4 border-b border-gray-300 py-8 last:border-none">
                   <div className="flex w-full items-center space-x-2">
                     <div className="h-10 w-10 bg-gray-400 rounded-full">
-
                     </div>
                     <div>
-                      <div className="font-semibold">
+                      <p className="font-semibold">
                         Felipe Santos &bull; 28 Nov. 2023
-                      </div>
-                      <div className="text-sm">
+                      </p>
+                      <p className="text-sm">
                         Full Stack Developer
-                      </div>
+                      </p>
                     </div>
                   </div>
                   <div className="grid grid-cols-12 gap-4 w-full">
@@ -121,8 +120,61 @@ const HomePage = () => {
             }
           </div>
         </main>
-        <aside className='col-span-4 w-full h-full'>
-          aside section
+        <aside className='col-span-4 w-full h-full p-6 flex flex-col space-y-4'>
+          <div>
+            <h3 className="my-6 text-lg font-semibold">
+              People you might be interested
+            </h3>
+            <div className="flex flex-col space-y-4">
+              {
+                Array.from({length: 4}).map((_,i) => (
+                  <div key={i} className="flex flex-row space-x-4 items-center">
+                    <div className="bg-gray-500 w-10 h-10 flex-none rounded-full">
+
+                    </div>
+                    <div>
+                      <div className="text-gray-900 font-bold text-sm">Lorem ipsum</div>
+                      <div className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quaerat cum adipisci incidunt dignissimos?</div>
+                    </div>
+                    <div>
+                      <button className="flex transition hover:border-gray-900 hover:text-gray-900 items-center space-x-3 rounded border border-gray-500 px-4 py-2">
+                        Follow
+                      </button>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div>
+            <h3 className="my-6 text-lg font-semibold">
+              Your reading list
+            </h3>
+            <div className="flex flex-col space-y-8">
+              {
+                Array.from({length: 5}).map((_,i) => (
+                  <div key={i} className="flex space-x-6 items-center group">
+                    <div className="w-2/5 bg-gray-400 rounded-xl h-full aspect-square">
+
+                    </div>
+                    <div className="w-3/5 flex flex-col space-y-2">
+                      <div className="text-lg font-semibold group-hover:underline decoration-indigo-300">Lorem ipsum dolor sit amet consectetur.</div>
+                      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, pariatur!</div>
+                      <div className="font-semibold flex space-x-1 items-center w-full">
+                        <div className="h-8 w-8 bg-gray-300 rounded-full"></div>
+                        <p>
+                          Felipe Santos
+                        </p>
+                        <p>
+                        &bull; 28 Nov. 2023
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
         </aside>
       </section>
     </div>    
