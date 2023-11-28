@@ -31,8 +31,8 @@ const HomePage = () => {
         </div>
       </header>
       <section className='grid grid-cols-12 place-items-center w-full h-full'>
-        <main className='col-span-8 border-r border-gray-300 w-full h-full'>
-          <div className='flex flex-col space-y-4 py-10 px-24 '>
+        <main className='col-span-8 border-r border-gray-300 w-full h-full px-24'>
+          <div className='flex flex-col space-y-4 py-10'>
             <div className='flex space-x-4 items-center w-full'>
               <label htmlFor='search' className='relative w-full border-gray-900 border rounded-3xl'>
                 <div className='absolute left-2 h-full flex items-center'>
@@ -53,7 +53,7 @@ const HomePage = () => {
                 <div className='flex space-x-2 items-center'>
                   {
                     Array.from({length: 5}).map((_, i) => (
-                      <div key={i} className='rounded-3xl bg-gray-200/50 px-4 py-3' >tag {i}</div>
+                      <div key={i} className='rounded-3xl bg-gray-200/90 px-4 py-3' >tag {i}</div>
                     ))
                   }
                 </div>
@@ -75,7 +75,50 @@ const HomePage = () => {
                 </div>
               </div>
           </div>
-          <div>
+          <div className="w-full flex flex-col justify-center space-y-8">
+            {  
+              Array.from({length:5}).map((_, i) => (
+                <div key={i} className="flex group flex-col space-y-4 border-b border-gray-300 py-8 last:border-none">
+                  <div className="flex w-full items-center space-x-2">
+                    <div className="h-10 w-10 bg-gray-400 rounded-full">
+
+                    </div>
+                    <div>
+                      <div className="font-semibold">
+                        Felipe Santos &bull; 28 Nov. 2023
+                      </div>
+                      <div className="text-sm">
+                        Full Stack Developer
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-12 gap-4 w-full">
+                    <div className="col-span-8 flex flex-col space-y-4">
+                      <p className="text-2xl font-bold text-gray-800 group-hover:underline decoration-indigo-600">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolores?
+                      </p>
+                      <p className="text-sm text-gray-500 break-words">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione laboriosam nostrum consequuntur laudantium, dignissimos necessitatibus enim assumenda voluptate. Quibusdam repudiandae non incidunt iusto asperiores fugit, dolores temporibus culpa rem sequi doloremque reprehenderit laborum nemo officia delectus praesentium quas. Ullam sequi illo omnis minus accusamus possimus ducimus, natus incidunt magni labore, id harum consectetur, alias eum at cum. Quos, ipsa delectus.
+                      </p>
+                    </div>
+                    <div className="col-span-4">
+                      <div className="bg-gray-300 w-full h-full rounded-xl transition hover:scale-105 duration-300 hover:shadow-xl"></div>
+                    </div>
+                  </div>
+                  <div className="col-span-full">
+                    <div className='flex items-center w-full space-x-4 justify-start'>
+                      <div className='flex space-x-2 items-center'>
+                        {
+                          Array.from({length: 5}).map((_, i) => (
+                            <div key={i} className='rounded-2xl bg-gray-200/90 px-6 py-2.5' >tag {i}</div>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+              ))
+            }
           </div>
         </main>
         <aside className='col-span-4 w-full h-full'>
