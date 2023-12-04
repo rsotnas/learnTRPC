@@ -4,32 +4,13 @@ import {BsBell} from 'react-icons/bs';
 import {FiEdit} from 'react-icons/fi';
 import {CiSearch} from 'react-icons/ci';
 import {HiChevronDown} from 'react-icons/hi';
+import {MainLayout} from 'src/layouts/MainLayout';
 
 const HomePage = () => {
+
   return (
-    <div className='flex flex-col w-full h-full'>
-      <header className='h-20 w-full flex flex-row justify-around items-center bg-white border-b-[1px] border-gray-200'>
-        <div>
-          <IoReorderThreeOutline className="text-2xl text-gray-600" />
-        </div>
-        <div className='font-thin text-xl'>Ultimate Blog Post</div>
-        <div className='flex items-center space-x-4'>
-          <div>
-            <BsBell className="text-2xl text-gray-600" />
-          </div>
-          <div>
-            <div className='w-5 h-5 bg-gray-600 rounded-full' />
-          </div>
-          <div>
-            <button className="flex transition hover:border-gray-900 hover:text-gray-900 items-center space-x-3 rounded border border-gray-200 px-4 py-2">
-              <div>Write</div>
-              <div>
-                <FiEdit/>
-              </div>
-            </button>
-          </div>
-        </div>
-      </header>
+    <MainLayout>
+
       <section className='grid grid-cols-12  w-full h-full'>
         <main className='col-span-8 border-r border-gray-300 w-full h-full px-24'>
           <div className='flex flex-col space-y-4 py-10'>
@@ -177,7 +158,7 @@ const HomePage = () => {
           </div>
         </aside>
       </section>
-    </div>    
+    </MainLayout>    
  );
 }
 
