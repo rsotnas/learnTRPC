@@ -17,6 +17,9 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["images.unsplash.com", "cloudfare-ipfs.com"],
+  },
 };
 
 export default config;
